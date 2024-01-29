@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm đại học</title>
+    <head>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
+      <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="hOANG.png" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1 >web tính GPA đại học </h1>
+      </div>
+    </header>
+    <!-- <select id="langSelect">
+      <option value="vi">Tiếng Việt</option>
+      <option value="en">Tiếng Anh</option>
+  </select> -->
+    <div class="container">
+      <div class="main">
+        <div class="input-group">
+          <span class="input-group-text translate"><i class="fas fa-graduation-cap"></i> Số tín chỉ tích lũy</span>
+          <input id="stcTichLuy" type="number" class="form-control translate" placeholder="Nhập số tín chỉ hiện tại" />
+        </div>
+        <div class="input-group">
+          <span class="input-group-text translate"><i class="fas fa-chart-line"></i> GPA tích lũy</span>
+          <input id="gpaTichLuy" type="number" class="form-control translate" placeholder="Nhập GPA hiện tại "/>
+        </div>
+        <div class="input-group">
+          <span class="input-group-text translate"><i class="fas fa-book"></i> Số tín chỉ ngành học yêu cầu</span>
+          <input id="stcYeuCau" type="number" class="form-control translate" placeholder="Nhập số tín chỉ nghành yêu cầu" />
+        </div>
+        <div class="input-group ">
+          <span class="input-group-text translate"><i class="fas fa-star"></i> GPA bạn muốn</span>
+          <input id="gpaMongMuon" type="number" class="form-control translate" placeholder="Nhập GPA mong muốn khi tốt nghiệp" />
+        </div>
+        <div class="input-group">
+          <span class="input-group-text translate"><i class="fas fa-arrow-up"></i> Số môn 4 tín chỉ học cải thiện</span>
+          <input id="soMon4ChiHCT" type="number" class="form-control translate" placeholder="Để trống nếu không học" />
+          <select class="form-select">
+            <option class="translate" value="1">Từ D lên C</option>
+            <option class="translate" value="2">Từ D lên B</option>
+            <option class="translate" value="3">Từ D lên A</option>
+            <option class="translate" value="4">Từ C lên B</option>
+            <option class="translate" value="5">Từ C lên A</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <span class="input-group-text translate"><i class="fas fa-arrow-up"></i> Số môn 3 tín chỉ học cải thiện </span>
+          <input id="soMon3ChiHCT" type="number" class="form-control translate" placeholder="Để trống nếu không học" />
+          <select class="form-select ">
+            <option class="translate" value="1">Từ D lên C</option>
+            <option class="translate" value="2">Từ D lên B</option>
+            <option class="translate" value="3">Từ D lên A</option>
+            <option class="translate" value="4">Từ C lên B</option>
+            <option class="translate" value="5">Từ C lên A</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <span class="input-group-text translate"><i class="fas fa-arrow-up"></i> Số môn 2 tín chỉ học cải thiện</span>
+          <input id="soMon2ChiHCT" type="number" class="form-control translate" placeholder="Để trống nếu không học" />
+          <select class="form-select">
+            <option class="translate" value="1">Từ D lên C</option>
+            <option class="translate" value="2">Từ D lên B</option>
+            <option class="translate" value="3">Từ D lên A</option>
+            <option class="translate" value="4">Từ C lên B</option>
+            <option class="translate" value="5">Từ C lên A</option>
+          </select>
+        </div>  
+        <div class="wrapper">
+          <button class="btn btn-seset translate" id="resetButton">
+            <i class="fas fa-redo"></i> Xoá hết
+          </button>
+          <button class="btn btn-success translate" id="kiemTraButton">
+            <i class="fas fa-check"></i> Kiểm tra
+          </button>
+        </div>
+        <div class="result translate">
+          <p class="ket-qua text-center translate"></p>
+        </div>
+<div class="reference-table">
+    <div class="row">
+      <div class="text-center">
+        <h3 class="translate">Tham khảo thông tin về cách tính điểm ở đại học</h3>
+        <p class="translate">Loại đạt có phân mức, áp dụng cho các học phần được tính vào điểm trung bình học tập, bao gồm:</p>
+        <p class="translate">- A quy đổi thành 4;</p>
+        <p class="translate">- B quy đổi thành 3;</p>
+        <p class="translate">- C quy đổi thành 2;</p>
+        <p class="translate">- D quy đổi thành 1;</p>
+        <p class="translate">- F quy đổi thành 0.</p>
+        <p class="translate">Loại đạt có phân mức, áp dụng cho các học phần được tính vào điểm trung bình học tập:</p>
+        <p class="translate">A: từ 8,5 đến 10,0;</p>
+        <p class="translate">B: từ 7,0 đến 8,4;</p>
+        <p class="translate">C: từ 5,5 đến 6,9;</p>
+        <p class="translate">D: từ 4,0 đến 5,4.</p>
+        <p class="translate">Với các môn không tính vào điểm trung bình, không phân mức, yêu cầu đạt P từ: 5,0 trở lên.</p>
+        <p class="translate">Loại không đạt F: dưới 4,0.</p>
+        <p class="translate">Một số trường hợp đặc biệt sử dụng các điểm chữ xếp loại, không được tính vào điểm trung bình học tập:</p>
+        <p class="translate">I: Điểm chưa hoàn thiện do được phép hoãn thi, kiểm tra;</p>
+        <p class="translate">X: Điểm chưa hoàn thiện do chưa đủ dữ liệu;</p>
+        <p class="translate">R: Điểm học phần được miễn học và công nhận tín chỉ.</p>
+        <p class="note translate">LƯU Ý BẢNG NÀY CHỈ MANG TÍNH CHẤT THAM KHẢO VÌ MỖI TRƯỜNG CÓ THỂ SẼ 1 CÁCH TÍNH GPA RIÊNG</p>
+    </div>
+  </div>
+  <div>
+    <button id="backToTopBtn" title="Go to top">&#9650;</button>
+  </div>
+</div>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright 2024 Hoàng. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

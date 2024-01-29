@@ -1,0 +1,24 @@
+ @media (min-width: 768px) {
+    .input-group {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .input-group-text {
+      width: auto;
+      margin-right: 10px;
+    }
+  
+    .form-control,
+    .form-select {
+      width: auto;
+    }
+  }
+  
+@media (max-width: 600px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+
+  
